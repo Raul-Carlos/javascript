@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
             font-family: Arial, Helvetica, sans-serif;
             color: white;
         }
+
         h1 {
             text-align: center;
             font-family: cursive;
@@ -19,12 +21,18 @@
         }
     </style>
 </head>
+
 <body>
-    <h1>Olá, mundo!</h1>
+    <h1 id="printUser"></h1>
     <script>
-        window.alert('msg')
-        window.confirm('msg')
-        window.prompt('Qual é seu nome?')
+        var printUser = document.getElementById("printUser")
+        window.alert('aguardando carregamento...')
+        window.confirm('carregado com sucesso!')
+        const userName = window.prompt('Qual é seu nome?')
+        alert(`Olá, ${userName}!`)
+        printUser.innerHTML = `Olá, ${userName}!😁`
+
     </script>
 </body>
+
 </html>
