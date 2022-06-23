@@ -7,7 +7,7 @@
     <title>Eventos DOM</title>
     <style>
         div#area{
-            background: lightsteelblue;
+            background: tomato;
             color: white;
             width: 200px;
             height: 200px;
@@ -19,13 +19,27 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()">
+    <div id="area" onclick="clicar()" onmouseleave="sair()">
         Interaja...
     </div>
     <script>
         function clicar(){
             var a = document.getElementById('area')
-            a.innerText = 'Clicou'
+            a.innerText = 'Clicou...'
+            if(a.style.background = "tomato"){
+                a.style.background =  "red"
+            }else{
+                a.style.background = "tomato"
+            }
+        }
+        function sair(){
+            var a = document.getElementById('area')
+            a.innerText = 'Saiu...'
+            if(a.style.background = "red"){
+                a.style.background =  "tomato"
+            }else{
+                a.style.background = "tomato"
+            }
         }
     </script>
 </body>
